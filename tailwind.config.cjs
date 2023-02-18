@@ -29,6 +29,12 @@ module.exports = {
         inverted: withOpacity("--color-fill"),
       },
     },
+    colors: {
+      dark: '#252d37',
+      themeLight: '#ffefde',
+      themeAccent: '#cf5266',
+
+    },
     backgroundColor: {
       skin: {
         fill: withOpacity("--color-fill"),
