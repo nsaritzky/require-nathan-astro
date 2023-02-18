@@ -5,6 +5,7 @@ export interface Props {
 }
 
 const { name, size = "sm" } = Astro.props;
+const BASE = import.meta.env.BASE_URL;
 ---
 
 <li
@@ -13,7 +14,7 @@ const { name, size = "sm" } = Astro.props;
   }`}
 >
   <a
-    href={`/tags/${name.toLowerCase()}`}
+    href={`${BASE}tags/${name.toLowerCase()}`}
     class={`${size === "sm" ? "text-sm" : "text-lg"} pr-2 group`}
   >
     <svg

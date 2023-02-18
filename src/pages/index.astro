@@ -17,6 +17,7 @@ const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
+const BASE = import.meta.env.BASE_URL;
 ---
 
 <Layout>
@@ -26,7 +27,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       <h1>Mingalaba</h1>
       <a
         target="_blank"
-        href="/rss.xml"
+        href={`${BASE}rss.xml/`}
         class="rss-link"
         aria-label="rss feed"
         title="RSS Feed"
@@ -76,7 +77,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
             <ul>
               {featuredPosts.map(({ data }) => (
                 <Card
-                  href={`/posts/${slugify(data)}`}
+                  href={`${BASE}posts/${slugify(data)}`}
                   frontmatter={data}
                   secHeading={false}
                 />
@@ -96,7 +97,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
             ({ data }, index) =>
               index < 4 && (
                 <Card
-                  href={`/posts/${slugify(data)}`}
+                  href={`${BASE}posts/${slugify(data)}`}
                   frontmatter={data}
                   secHeading={false}
                 />
@@ -105,7 +106,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         }
       </ul>
       <div class="all-posts-btn-wrapper">
-        <LinkButton href="/posts">
+        <LinkButton href={`${BASE}posts/`}>
           All Posts
           <svg xmlns="http://www.w3.org/2000/svg"
             ><path

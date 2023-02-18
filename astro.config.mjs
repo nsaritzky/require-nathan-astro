@@ -7,7 +7,8 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://nsaritzky.github.io/require-nathan-astro",
+  site: "https://nsaritzky.github.io",
+  base: "/require-nathan-astro",
   integrations: [
     tailwind({
       config: {
