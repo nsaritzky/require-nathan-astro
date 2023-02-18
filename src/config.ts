@@ -1,7 +1,7 @@
 import type { SocialObjects } from "./types";
 
 export const SITE = {
-  website: "https://astro-paper.pages.dev/",
+  website: "https://nsaritzky.github.io/require-nathan-astro",
   author: "Nathan Saritzky",
   desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
   title: "require('nathan')",
